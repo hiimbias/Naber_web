@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="../static/style_base.css">
+    <link rel="stylesheet" href="{% block style %}
+                                    {% endblock %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+        href="/css/app-wa-02670e9412103b5852dcbe140d278c49.css?vsn=d">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">Free shipping on orders over $600!</div>
+    <div class="nav_bar">
+        <a href="#"><img id="logo" src="{{ url_for('get_image', filename='Naber.png') }}" alt="Logo"></a>
+        <ul>
+            <li><a href="">Apparel</a></li>
+            <li><a href="">Furniture</a></li>
+            <li><a href="">Accessories</a></li>
+            <li><a href="">Home and Decor</a></li>
+            <li><a href="">Deals</a></li>
+        </ul>
+        <div class="sub_nav_bar">
+            <ul>
+                <li id="icon"><a href=""><i class="fa-regular fa-cart-shopping" style="font-size:18px;"></i></a></li>
+                <li id="icon" class="search-bar-container">
+                    <input id="searchbar" type="text" placeholder="Search">
+                    <a href="#" class="search-icon"><i id="search-icon" class="fa-regular fa-magnifying-glass"
+                            style="margin-bottom:10px;"></i></a>
+                </li>
+                <li id="icon"><a href=""><i class="fa-regular fa-heart" style="font-size:18px;"></i></a></li>
+                <li id="icon"><a href=""><i class="fa-regular fa-user" style="font-size:18px;"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- unique content -->
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+        <div class="footer_content">
+            <div class="footer_section">
+                <div id="footer_logo"><a href="#"><img src="{{ url_for('get_image', filename='Naberwhite.png') }}"
+                            alt="Naber"></a></div>
+                <p>Copyright © 2023 Naber Shop.</p>
+                <p>Powered by Company S.L.</p>
+                <p>All rights reserved.</p>
+            </div>
+            <div class="footer_section">
+                <h2>Shop now</h2>
+                <ul>
+                    <li><a href="#">Apparel</a></li>
+                    <li><a href="#">Home & Furniture</a></li>
+                    <li><a href="#">Decor & Accessories</a></li>
+                    <li><a href="#">Home & Decor</a></li>
+                </ul>
+            </div>
+            <div class="footer_section">
+                <h2>Contact us</h2>
+                <ul>
+                    <li id="footer_contact_title">Call us</li>
+                    <li id="footer_contact_list">(011) 1411 - 2003</p>
+                    </li>
+                    <li id="footer_contact_title">Email us</li>
+                    <li id="footer_contact_list">nabershopforeveryone@gmail.com</p>
+                    </li>
+                    <li id="footer_contact_title">Address</li>
+                    <li id="footer_contact_list">East 38th Street, USA</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_section">
+                <h2>Follow us</h2>
+                <a href="#"><img src="{{ url_for('get_image', filename='facebook.png') }}" alt=""></a>
+                <a href="#"><img src="{{ url_for('get_image', filename='instagram.png') }}" alt=""></a>
+                <a href="#"><img src="{{ url_for('get_image', filename='youtube.png') }}" alt=""></a>
+                <a href="#"><img src="{{ url_for('get_image', filename='snapchat.png') }}" alt=""></a>
+            </div>
+        </div>
+    </footer>
+
+</body>

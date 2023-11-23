@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block style %}
+../static/style1.css
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="container_slider">
+        <img src="{{ url_for('get_image', filename='container_slider_bg.jpg') }}" alt="">
+        <button type="submit">SHOP NOW</button>
+    </div>
+    <div class="container-01">
+        <div class="container-sub-01">
+            <img src="{{ url_for('get_image', filename='container_01_image_01.jpg') }}" alt="">
+            <button id="container_01_button_01" type="submit">SHOP NOW</button>
+            
+        </div>
+        <div class="container-sub-02">
+            <img src="{{ url_for('get_image', filename='container_01_image_02.jpg') }}" alt="">
+            <button id="container_01_button_02" type="submit">SHOP NOW</button>
+        </div>
+    </div>
+
+    <div class="container-section-02">
+        <div class="container-section-02-title">
+            <h1>Our Special</h1>
+            <p>HOME ACCESORIES</p>
+        </div>
+        
+<div class="container-setlist">
+    <!-- Thẻ sản phẩm -->
+    <div class="container-list">
+        <img src="{{ url_for('get_image', filename='item-01.jpg') }}" alt="">
+        <h4 class="category">HOME AND DECOR</h4>
+        <h2 class="name">Fringe Raffia Placemat</h2>
+        <div class="rating">
+            <img src="{{ url_for('get_image', filename='rating-star.png') }}" alt="" id="rating-star">
+            <p id="rating-count">(126)</p>
+        </div>
+        <h1 class="price">$121.6</h1>
+        <button id="add_to_cart" type="submit">Add to cart</button>
+    </div>
+     <!-- Thẻ sản phẩm -->
+     <div class="container-list">
+        <img src="{{ url_for('get_image', filename='item-01.jpg') }}" alt="">
+        <h4 class="category">HOME AND DECOR</h4>
+        <h2 class="name">Fringe Raffia Placemat</h2>
+        <div class="rating">
+            <img src="{{ url_for('get_image', filename='rating-star.png') }}" alt="" id="rating-star">
+            <p id="rating-count">(126)</p>
+        </div>
+        <h1 class="price">$121.6</h1>
+        <button id="add_to_cart" type="submit">Add to cart</button>
+    </div>
+     <!-- Thẻ sản phẩm -->
+     <div class="container-list">
+        <img src="{{ url_for('get_image', filename='item-01.jpg') }}" alt="">
+        <h4 class="category">HOME AND DECOR</h4>
+        <h2 class="name">Fringe Raffia Placemat</h2>
+        <div class="rating">
+            <img src="{{ url_for('get_image', filename='rating-star.png') }}" alt="" id="rating-star">
+            <p id="rating-count">(126)</p>
+        </div>
+        <h1 class="price">$121.6</h1>
+        <button id="add_to_cart" type="submit">Add to cart</button>
+    </div>
+</div>
+<!-- Container 03 -->
+<div class="container-section-02-title">
+    <h1>Our Special</h1>
+    <p>CLOTHING</p>
+</div>
+
+<div class="container-setlist">
+     <!-- Thẻ sản phẩm -->
+     <div class="container-list">
+        <img src="{{ url_for('get_image', filename='item-01.jpg') }}" alt="">
+        <h4 class="category">HOME AND DECOR</h4>
+        <h2 class="name">Fringe Raffia Placemat</h2>
+        <div class="rating">
+            <img src="{{ url_for('get_image', filename='rating-star.png') }}" alt="" id="rating-star">
+            <p id="rating-count">(126)</p>
+        </div>
+        <h1 class="price">$121.6</h1>
+        <button id="add_to_cart" type="submit">Add to cart</button>
+    </div>
+     <!-- Thẻ sản phẩm -->
+     <div class="container-list">
+        <img src="{{ url_for('get_image', filename='item-01.jpg') }}" alt="">
+        <h4 class="category">HOME AND DECOR</h4>
+        <h2 class="name">Fringe Raffia Placemat</h2>
+        <div class="rating">
+            <img src="{{ url_for('get_image', filename='rating-star.png') }}" alt="" id="rating-star">
+            <p id="rating-count">(126)</p>
+        </div>
+        <p class="price">$121.6</p>
+        <button id="add_to_cart" type="submit">Add to cart</button>
+    </div>
+     <!-- Thẻ sản phẩm -->
+     <div class="container-list">
+        <img src="{{ url_for('get_image', filename='item-01.jpg') }}" alt="">
+        <h4 class="category">HOME AND DECOR</h4>
+        <h2 class="name">Fringe Raffia Placemat</h2>
+        <div class="rating">
+            <img src="{{ url_for('get_image', filename='rating-star.png') }}" alt="" id="rating-star">
+            <p id="rating-count">(126)</p>
+        </div>
+        <h1 class="price">$121.6</h1>
+        <button id="add_to_cart" type="submit">Add to cart</button>
+    </div>
+</div>
+
+<div class="container-section-02-title">
+    <h1>Everyting for a unique home</h1>
+    <p>YOUR CHOICES</p>
+</div>
+<div class="container-03">
+    <img src="{{ url_for('get_image', filename='living-room.jpg') }}" alt="">
+    <img src="{{ url_for('get_image', filename='Kitchen.jpg') }}" alt="">
+    <img src="{{ url_for('get_image', filename='Bedding.jpg') }}" alt="">
+</div>
+
+
+
+<div class="container-04">
+    <img src="{{ url_for('get_image', filename='container-04.jpg') }}" alt="">
+</div>
+
+<div class="container-05">
+    <img src="{{ url_for('get_image', filename='container-05.jpg') }}" alt="">
+</div>
+
+<div class="container-06">
+    <img src="{{ url_for('get_image', filename='container-06.jpg') }}" alt="">
+</div>
+
+<div class="container-07">
+    <img src="{{ url_for('get_image', filename='container-07.jpg') }}" alt="">
+</div>
+
+<div class="container-08">
+    <img src="{{ url_for('get_image', filename='container-08.jpg') }}" alt="">
+</div>
+<div class="container-09">
+    <img src="{{ url_for('get_image', filename='container-09.jpg') }}" alt="">
+</div>
+
+<div class="container-10">
+    <img src="{{ url_for('get_image', filename='container-10.jpg') }}" alt="">
+    <div id="email-submit">
+        <input type="text" placeholder="Enter email address here">
+        <button type="submit"> Submit now</button>
+    </div>
+    
+</div>
+    </div>
+   
+</div>
+
+
+{% endblock %}
