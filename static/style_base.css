@@ -103,6 +103,60 @@ a {
 }
 
 
+/* email-input */
+/* Container 10 */
+
+.container-10 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-10 img {
+  width: 100%;
+  position: relative;
+}
+
+#email-submit {
+  position: absolute;
+  display: flex;
+  margin-top: 100px;
+}
+
+#email-submit input {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  width: 38.472vw;
+  height: 9.113924050632912vh;
+  padding-left: 20px;
+  font-size: 20px;
+
+}
+
+#email-submit input::placeholder {
+  color: #fff;
+  font-size: 20px;
+}
+
+#email-submit button {
+  background-color: #fff;
+  color: #99582A;
+  font-weight: bold;
+  font-size: 1.667vw;
+  width: 15.208vw;
+  border: none;
+  border-radius: 5px;
+  margin-left: 2.639vw;
+
+}
+
+#email-submit button:active {
+  color: #fff;
+  background-color: #99582A;
+}
+
 
 
 /* Footer */

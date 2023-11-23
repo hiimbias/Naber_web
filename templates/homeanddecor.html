@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% block title %}
+Home and Decor
+{% endblock %}
+
+{% block style %}
+../static/homeanddecor.css
+{% endblock %}
+
+{% block content %} 
+    <a href="#"><img id="slider" src="{{ url_for('get_image', filename='had_slider_image.jpg') }}" alt="slider"></a>
+    <div class="container_01">
+        <a href="#"><img src="{{ url_for('get_image', filename='had_container_01_bigimage.jpg') }}" alt="bigimage"></a>
+        <div class="grid-gallery">
+            <a href="#"><img src="{{ url_for('get_image', filename='had_container01_gallery01.jpg') }}" alt=""></a>
+            <a style="margin-right:0px;" href="#"><img
+                    src="{{ url_for('get_image', filename='had_container01_gallery02.jpg') }}" alt=""></a>
+            <a href="#"><img src="{{ url_for('get_image', filename='had_container01_gallery03.jpg') }}"
+                    alt=""></a>
+            <a style="margin-right:0px;" href="#"><img
+                    src="{{ url_for('get_image', filename='had_container01_gallery04.jpg') }}"
+                    alt=""></a>
+        </div>
+    </div>
+    <div class="container_01">
+        <div class="grid-gallery">
+            <a href="#"><img src="{{ url_for('get_image', filename='had_container01_gallery05.jpg') }}"
+                    alt=""></a>
+            <a style="margin-right:0px;" href="#"><img
+                    src="{{ url_for('get_image', filename='had_container01_gallery06.jpg') }}"
+                    alt=""></a>
+            <a href="#"><img src="{{ url_for('get_image', filename='had_container01_gallery07.jpg') }}"
+                    alt=""></a>
+            <a style="margin-right:0px;" href="#"><img
+                    src="{{ url_for('get_image', filename='had_container01_gallery08.jpg') }}"
+                    alt=""></a>
+        </div>
+        <a href="#"><img src="{{ url_for('get_image', filename='had_container_01_bigimage_02.jpg') }}"
+                alt="bigimage"></a>
+    </div>
+
+    <button type="submit" class="showmore">Show more</button>
+
+    <div class="container-section-02-title">
+        <h1>Best Seller</h1>
+        <p>MODERN</p>
+    </div>
+    <div class="container-02">
+        <!-- Thẻ sản phẩm -->
+        <div class="container-list">
+            <img src="{{ url_for('get_image', filename='had_product_01.jpg') }}" alt="">
+            <h2 class="name">Murmur candle</h2>
+            <p class="category">HOME AND DECOR</p>
+            <div class="rating">
+                <img src="{{ url_for('get_image', filename='rating-star.png') }}" alt=""
+                    id="rating-star">
+                <p id="rating-count">(126)</p>
+            </div>
+            <h1 class="price">$121.6</h1>
+            <button id="add_to_cart" type="submit">Add to cart</button>
+        </div>
+        <!-- Thẻ sản phẩm -->
+        <div class="container-list">
+            <img src="{{ url_for('get_image', filename='had_product_01.jpg') }}" alt="">
+            <h2 class="name">Murmur candle</h2>
+            <p class="category">HOME AND DECOR</p>
+            <div class="rating">
+                <img src="{{ url_for('get_image', filename='rating-star.png') }}" alt=""
+                    id="rating-star">
+                <p id="rating-count">(126)</p>
+            </div>
+            <h1 class="price">$121.6</h1>
+            <button id="add_to_cart" type="submit">Add to cart</button>
+        </div>
+        <!-- Thẻ sản phẩm -->
+        <div class="container-list">
+            <img src="{{ url_for('get_image', filename='had_product_01.jpg') }}" alt="">
+            <h2 class="name">Murmur candle</h2>
+            <p class="category">HOME AND DECOR</p>
+            <div class="rating">
+                <img src="{{ url_for('get_image', filename='rating-star.png') }}" alt=""
+                    id="rating-star">
+                <p id="rating-count">(126)</p>
+            </div>
+            <h1 class="price">$121.6</h1>
+            <button id="add_to_cart" type="submit">Add to cart</button>
+        </div>
+        <!-- Thẻ sản phẩm -->
+        <div class="container-list">
+            <img src="{{ url_for('get_image', filename='had_product_01.jpg') }}" alt="">
+            <h2 class="name">Murmur candle</h2>
+            <p class="category">HOME AND DECOR</p>
+            <div class="rating">
+                <img src="{{ url_for('get_image', filename='rating-star.png') }}" alt=""
+                    id="rating-star">
+                <p id="rating-count">(126)</p>
+            </div>
+            <h1 class="price">$121.6</h1>
+            <button id="add_to_cart" type="submit">Add to cart</button>
+        </div>
+        
+    </div>
+
+    <div class="container-section-02-title">
+        <h1>Best Seller</h1>
+        <p>FARMHOUSE</p>
+    </div>
+    <div class="container-02">
+        <!-- Thẻ sản phẩm -->
+        <div class="container-list">
+            <img src="{{ url_for('get_image', filename='had_product_01.jpg') }}" alt="">
+            <h2 class="name">Murmur candle</h2>
+            <p class="category">HOME AND DECOR</p>
+            <div class="rating">
+                <img src="{{ url_for('get_image', filename='rating-star.png') }}" alt=""
+                    id="rating-star">
+                <p id="rating-count">(126)</p>
+            </div>
+            <h1 class="price">$121.6</h1>
+            <button id="add_to_cart" type="submit">Add to cart</button>
+        </div><!-- Thẻ sản phẩm -->
+        <div class="container-list">
+            <img src="{{ url_for('get_image', filename='had_product_01.jpg') }}" alt="">
+            <h2 class="name">Murmur candle</h2>
+            <p class="category">HOME AND DECOR</p>
+            <div class="rating">
+                <img src="{{ url_for('get_image', filename='rating-star.png') }}" alt=""
+                    id="rating-star">
+                <p id="rating-count">(126)</p>
+            </div>
+            <h1 class="price">$121.6</h1>
+            <button id="add_to_cart" type="submit">Add to cart</button>
+        </div><!-- Thẻ sản phẩm -->
+        <div class="container-list">
+            <img src="{{ url_for('get_image', filename='had_product_01.jpg') }}" alt="">
+            <h2 class="name">Murmur candle</h2>
+            <p class="category">HOME AND DECOR</p>
+            <div class="rating">
+                <img src="{{ url_for('get_image', filename='rating-star.png') }}" alt=""
+                    id="rating-star">
+                <p id="rating-count">(126)</p>
+            </div>
+            <h1 class="price">$121.6</h1>
+            <button id="add_to_cart" type="submit">Add to cart</button>
+        </div><!-- Thẻ sản phẩm -->
+        <div class="container-list">
+            <img src="{{ url_for('get_image', filename='had_product_01.jpg') }}" alt="">
+            <h2 class="name">Murmur candle</h2>
+            <p class="category">HOME AND DECOR</p>
+            <div class="rating">
+                <img src="{{ url_for('get_image', filename='rating-star.png') }}" alt=""
+                    id="rating-star">
+                <p id="rating-count">(126)</p>
+            </div>
+            <h1 class="price">$121.6</h1>
+            <button id="add_to_cart" type="submit">Add to cart</button>
+        </div>
+    </div>
+
+
+
+    <button type="submit" class="showmore">Show more</button>
+
+{% endblock %}-->

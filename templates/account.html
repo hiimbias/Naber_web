@@ -1,0 +1,308 @@
+{% extends 'base.html' %}
+{% block title %}
+Account
+{% endblock %}
+
+{% block style %}
+../static/account.css
+{% endblock %}
+
+{% block content %}
+<div class="account__container">
+    <div class="account__box">
+        <div class="account__box__left">
+            <div class="account__box__left__header">
+                <div class="account__box__left__header__avatar">
+                    <img src="{{ url_for('get_image', filename='user_avatar.png') }}" alt="" />
+                </div>
+
+                <div>
+                    <p>Account of</p>
+                    <p>Quynh An</p>
+                </div>
+            </div>
+
+            <div class="account__box__left__list">
+                <div class="account__box__left__item">
+                    <a href=""><span>Account Information</span></a>
+                </div>
+
+                <div class="account__box__left__item">
+                    <a href=""><span>My Notice</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="account__box__right">
+            <h3>Account Information</h3>
+            <p>Personal information</p>
+            <form action="">
+                <div class="account__box__right__customer">
+                    <div class="account__box__right__customer__infor">
+                        <div class="account__box__right__customer__avatar">
+                            <img src="{{ url_for('get_image', filename='user_avatar.png') }}" alt="" />
+                        </div>
+
+                        <div class="account__box__right__customer__infor">
+                            <div class="account__box__right__customer__infor__list">
+                                <div class="account__box__right__customer__infor__item">
+                                    <span>Surname & First Name</span>
+                                    <div class="account__box__right__customer__infor__item__input">
+                                        <input type="text" value="Nguyen Thi Thuy Quynh" />
+                                    </div>
+                                </div>
+                                <div class="account__box__right__customer__infor__item">
+                                    <span>Nickname</span>
+                                    <div class="account__box__right__customer__infor__item__input">
+                                        <input type="text" value="Quynh An" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="account__box__right__customer__date">
+                        <span>Date of birth</span>
+
+                        <div class="account__box__right__customer__date__option">
+                            <input type="date" id="dob" name="dob" required>
+
+
+                            <!-- <div>
+                                <select id="cars" name="carlist" form="carform">
+                                    <option value="Date">Date</option>
+                                </select>
+    
+                                <select id="cars" name="carlist" form="carform">
+                                    <option value="Month">Month</option>
+                                </select>
+    
+                                <select id="cars" name="carlist" form="carform">
+                                    <option value="Year">Year</option>
+                                </select>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div class="account__box__right__customer__sex">
+                        <span style="margin-right: 90px;">Sex</span>
+
+                        <div class="account__box__right__customer__sex__option">
+                                <input type="radio" id="html" name="fav_language" value="HTML" />
+                                <label for="html">Male</label><br />
+                                <input type="radio" id="css" name="fav_language" value="CSS" />
+                                <label for="css">Fermale</label><br />
+                                <input type="radio" id="javascript" name="fav_language" value="JavaScript" />
+                                <label for="javascript">Other</label>
+                        </div>
+                    </div>
+
+                    <div class="account__box__right__customer__nationality">
+                        <span>Nationality</span>
+
+                        <div class="account__box__right__customer__nationality__input">
+                            <label for="countries"></label>
+                            <select id="countries" name="countries"></select>
+                            <script>
+                                fetch('https://restcountries.com/v3.1/all')
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        // Sort countries alphabetically by their common names
+                                        data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+
+                                        const countriesSelect = document.getElementById('countries');
+
+                                        // Loop through the countries and add them to the drop-down
+                                        data.forEach(country => {
+                                            const option = document.createElement('option');
+                                            option.value = country.name.common;
+                                            option.textContent = country.name.common;
+                                            countriesSelect.appendChild(option);
+                                        });
+                                    })
+                                    .catch(error => console.error('Error fetching countries:', error));
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="account__box__right__customer--save">
+                        <button>Save changes</button>
+                    </div>
+            </form>
+
+
+            <div class="account__box__right__customer__general account__box__right__customer__contact">
+                <h3>Phone number and email</h3>
+
+                <ul class="account__box__right__customer__general__list account__box__right__customer__contact__list">
+                    <li
+                        class="account__box__right__customer__general__item account__box__right__customer__contact__item">
+                        <div
+                            class="account__box__right__customer__general__item__left account__box__right__customer__contact__item__left">
+                            <div class="account__box__right__customer__contact__item__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone"
+                                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2">
+                                    </path>
+                                </svg>
+                            </div>
+
+                            <div
+                                class="account__box__right__customer__general__item__text account__box__right__customer__contact__item__text">
+                                <p>Phone number</p>
+                                <p>0867007653</p>
+                            </div>
+                        </div>
+                        <div
+                            class="account__box__right__customer__general__item__btn account__box__right__customer__contact__item__btn">
+                            <button
+                                class="account__box__right__customer__general__item__btn--update account__box__right__customer__contact__item__btn--update">
+                                Change
+                            </button>
+                        </div>
+                    </li>
+
+                    <li
+                        class="account__box__right__customer__general__item account__box__right__customer__contact__item">
+                        <div
+                            class="account__box__right__customer__general__item__left account__box__right__customer__contact__item__left">
+                            <div class="account__box__right__customer__contact__item__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail"
+                                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z">
+                                    </path>
+                                    <path d="M3 7l9 6l9 -6"></path>
+                                </svg>
+                            </div>
+
+                            <div
+                                class="account__box__right__customer__general__item__text account__box__right__customer__contact__item__text">
+                                <p>Email</p>
+                                <p>
+                                    quynhannguyen14112003@gmail.com
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="account__box__right__customer__general__item__btn account__box__right__customer__contact__item__btn">
+                            <button
+                                class="account__box__right__customer__general__item__btn--update account__box__right__customer__contact__item__btn--update">
+                                Change
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="account__box__right__customer__general account__box__right__customer__security">
+                <h3>Security</h3>
+
+                <ul class="account__box__right__customer__general__list account__box__right__customer__security__list">
+                    <li
+                        class="account__box__right__customer__general__item account__box__right__customer__security__item">
+                        <div class="account__box__right__customer__general__item__left">
+                            <div class="account__box__right__customer__security__item__icon">
+                                <i class="fa-solid fa-lock-keyhole"></i>
+                            </div>
+
+                            <div
+                                class="account__box__right__customer__general__item__text account__box__right__customer__security__item__text">
+                                <p>Change password</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="account__box__right__customer__general__item__btn account__box__right__customer__security__item__btn">
+                            <button
+                                class="account__box__right__customer__general__item__btn--update account__box__right__customer__security__item__btn--update">
+                                Update
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="account__box__right__customer__general account__box__right__customer__social">
+                <h3>Social network link</h3>
+
+                <ul class="account__box__right__customer__general__list account__box__right__customer__social__list">
+                    <li
+                        class="account__box__right__customer__general__item account__box__right__customer__social__item">
+                        <div class="account__box__right__customer__general__item__left">
+                            <div class="account__box__right__customer__social__item__icon">
+                                <i class="fa-brands fa-facebook"></i>
+                            </div>
+
+                            <div
+                                class="account__box__right__customer__general__item__text account__box__right__customer__social__item__text">
+                                <p>Facebook</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="account__box__right__customer__general__item__btn account__box__right__customer__social__item__btn">
+                            <button
+                                class="account__box__right__customer__general__item__btn--update account__box__right__customer__social__item__btn--update">
+                                Update
+                            </button>
+                        </div>
+                    </li>
+
+                    <li
+                        class="account__box__right__customer__general__item account__box__right__customer__social__item">
+                        <div class="account__box__right__customer__general__item__left">
+                            <div class="account__box__right__customer__social__item__icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+
+                            <div
+                                class="account__box__right__customer__general__item__text account__box__right__customer__social__item__text">
+                                <p>Instagram</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="account__box__right__customer__general__item__btn account__box__right__customer__social__item__btn">
+                            <button
+                                class="account__box__right__customer__general__item__btn--update account__box__right__customer__social__item__btn--update">
+                                Update
+                            </button>
+                        </div>
+                    </li>
+
+                    <li
+                        class="account__box__right__customer__general__item account__box__right__customer__social__item">
+                        <div class="account__box__right__customer__general__item__left">
+                            <div class="account__box__right__customer__social__item__icon">
+                                <i class="fa-brands fa-google"></i>
+                            </div>
+
+                            <div
+                                class="account__box__right__customer__general__item__text account__box__right__customer__social__item__text">
+                                <p>Google</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="account__box__right__customer__general__item__btn account__box__right__customer__social__item__btn">
+                            <button
+                                class="account__box__right__customer__general__item__btn--update account__box__right__customer__social__item__btn--update">
+                                Update
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,224 @@
+.account__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.account__box {
+    width: 100%;
+    display: flex;
+    padding: 40px;
+}
+
+.account__box__left {
+    width: 293px;
+}
+
+.account__box__left__header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.account__box__left__header__avatar {
+    width: 70px;
+    height: 70px;
+}
+
+.account__box__left__header__avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.account__box__left__header p {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.account__box__left__list {
+    margin-top: 25px;
+}
+
+.account__box__left__item {
+    padding: 5px;
+    font-weight: 500;
+}
+
+.account__box__left__item:first-child {
+    color: #99582a;
+}
+
+.account__box__left__item:hover {
+    color: #99582a;
+}
+
+/* right */
+.account__box__right {
+    flex: 1;
+}
+
+.account__box__right input[type="text"],
+select {
+    border: 1px solid #cfcecd;
+    height: 32px;
+    width: 200px;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.account__box__right__customer {
+    min-width: 831px;
+    margin-top: 30px;
+}
+
+.account__box__right__customer__infor {
+    display: flex;
+    align-items: center;
+}
+
+.account__box__right__customer__infor__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.account__box__right__customer__infor__item__input {
+    margin-left: 30px;
+}
+
+.account__box__right__customer__infor__item:last-child {
+    margin-top: 20px;
+}
+
+.account__box__right__customer__date {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.account__box__right__customer__date select {
+    margin-left: 30px;
+}
+
+.account__box__right__customer__date__option input[type="date"] {
+    margin-left: 50px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+.account__box__right__customer__sex {
+    margin-top: 30px;
+    display: flex;
+}
+
+.account__box__right__customer__sex__option  {
+    display: flex;
+    justify-content: space-around;
+}
+.account__box__right__customer__sex__option label {
+    margin-right: 97.5px;
+}
+
+.account__box__right__customer__sex__option input {
+    margin-left: 30px;
+}
+
+.account__box__right__customer__nationality {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.account__box__right__customer__nationality__input {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.account__box__right__customer__nationality__input select {
+    width: 100%;
+    height: 100%;
+    border: 1px solid gray;
+    border-radius: 4px;
+    outline: none;
+}
+
+.account__box__right__customer--save {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.account__box__right__customer--save button {
+    color: #fff;
+    background-color: #99582a;
+    margin-top: 30px;
+    width: 173px;
+    height: 38px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.account__box__right__customer__general {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.account__box__right__customer__general__list {
+    width: 618px;
+    margin-top: 20px;
+}
+
+.account__box__right__customer__general__item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3.7974683544303796vh;
+}
+
+.account__box__right__customer__general__item__left {
+    display: flex;
+    align-items: center;
+}
+
+.account__box__right__customer__social__item__icon i {
+    font-size: 24px;
+}
+
+.account__box__right__customer__general__item__text {
+    margin-left: 30px;
+}
+
+.account__box__right__customer__general__item__btn {
+    margin-left: 30px;
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.account__box__right__customer__general__item__btn--update {
+    width: 100%;
+    height: 100%;
+    color: #99582a;
+    background-color: #fff;
+    border: 1px solid #99582a;
+}
+
+
+.account__box__right__customer__security__item__icon i {
+    font-size: 24px;
+}
+
+.account__box__right__customer__avatar img {
+    width: 150px;
+    height: 150px;
+}
